@@ -1,55 +1,16 @@
-26 lines (21 sloc) 1012 Bytes 
-Raw
-Blame
-History
+var mo4046 = L.map('mapdiv').setView([32.18, -99.14], 4)
+L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png').addTo(mo4046)
+var BlockG = L.marker([30.3947416, -91.1735687]).addTo(mo4046)
+var ArmstrongApartment = L.polygon([
+  [30.399766, -91.174437],
+  [30.396898, -91.177514],
+  [30.395058, -91.173975],
+  [30.398310, -91.170756]
+]).addTo(mo4046)
+// create a red polyline from an array of LatLng points
+var polyline1 = L.polyline([[30.397059, -91.174414], [30.416975, -91.171357]]).addTo(mo4046);
+mo4046.fitBounds(polyline1.getBounds());
 
-
-var mymap = L.map('mapdiv').setView([-4.8, 11.85], 10)
-
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(mymap)
-
-var mark1 = L.marker([30.033333, 31.233333]).addTo(mymap)
-
-var mark2 = L.marker([31.2, 29.916667]).addTo(mymap)
-
-var mark3 = L.marker([-4.267778, 15.291944]).addTo(mymap)
-
-var mark4 = L.marker([42.3, -71.8]).addTo(mymap)
-
-var mark5 = L.marker([30.4475, -91.178611]).addTo(mymap)
-
-var mark6 = L.marker([39, -111]).addTo(mymap)
-
-
-
-var polygon1 = L.polygon([[31, -88],
-
-                          [35, -88],
-
-                          [32, -82]]).addTo(mymap); 
-
-var polyline1 = L.polyline([[-4.267778, 15.291944],[30.4475, -91.178611]]).addTo(mymap);
-
-mymap.fitBounds(polyline1.getBounds());
-
-
-
-mark1.bindPopup('Cairo,Egypt')
-
-mark2.bindPopup('Alexandria, Egype')
-
-mark3.bindPopup('Brazzaville, Congo')
-
-mark4.bindPopup('New-York, Massachusetts')
-
-mark5.bindPopup('Baton Rouge, Louisiana)')
-
-mark6.bindPopup('Salt Lake City, Utah')
-
-
-
-
-
-polygon1.bindPopup('A polygon')
-
-polyline1.bindPopup('Distanced Travelled')
+BlockG.bindPopup('The Armstrong')
+ArmstrongApartment.bindPopup('MO_s Apartment')
+polyline1.bindPopup('Flight of the crow')
