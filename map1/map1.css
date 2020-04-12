@@ -1,5 +1,9 @@
-MO_4046 
-div {
+#MO_4046
+{
   border-style: solid;
-  height: 260px;
+  height: 260px; width: auto;
+}
+h1 {
+  font-family: Arial;
+  color: Blue
 }
