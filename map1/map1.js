@@ -11,5 +11,5 @@ var polygon1 = L.polygon([
 var polyline1 = L.polyline([[30.397059, -91.174414], [30.416975, -91.171357]]).addTo(MO4046);
 MO4046.fitBounds(polyline1.getBounds());
 
-polygon1.bindPopup('Your polygon popup text here.')
-point1.bindPopup('Your marker popup text here.')
+polygon1.bindPopup('Polygon.')
+point1.bindPopup('ICC')
