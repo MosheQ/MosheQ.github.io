@@ -6,3 +6,6 @@ var Polygon1 = L.polygon([
   [35, -88],
   [32, -82]
 ]).addTo(MO4046)
+
+Polygon1.bindPopup('Your polygon popup text here.')
+Point1.bindPopup('Your marker popup text here.')
