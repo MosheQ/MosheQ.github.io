@@ -7,7 +7,7 @@ L.tileLayer.wms('http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi', {
   format: 'image/png',
   transparent: true,
   attribution: 'NOAA, Iowa State University'
-}).addTo(MO4046)
+}).addTo(mymap)
 
 
 L.tileLayer.wms('https://mesonet.agron.iastate.edu/cgi-bin/wms/us/wwa.cgi', {
@@ -15,4 +15,4 @@ L.tileLayer.wms('https://mesonet.agron.iastate.edu/cgi-bin/wms/us/wwa.cgi', {
   format: 'image/png',
   transparent: true,
   attribution: 'NOAA, Iowa State University'
-}).addTo(MO4046)
+}).addTo(mymap)
