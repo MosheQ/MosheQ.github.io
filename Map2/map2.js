@@ -1,4 +1,4 @@
-var MO4046 = L.map('mymap').setView([32.18, -99.14], 15)
+var MO4046 = L.map('mymap').setView([32.18, -99.14], 4)
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(MO4046)
 
 
