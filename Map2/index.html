@@ -13,13 +13,33 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+  
+div {
+  border: 3px solid #4CAF50;
+  padding: 5px;
+}
+
+
+.clearfix {
+  overflow: auto;
+}
+
+.img {
+  float: right;
+}
+
 </style>
    <body>
-    <img src="landscape-2947094_1920.jpg" alt="lighthouse" height="160" width="700">
-    <p>Image credit: Photolia.com</p>
-    	<h1>Moses Okonkwo</h1>
-     <p>Department of Geography</p>
-    <p> LAB EIGHT: Showing Tigerland, The ICC and a 'crow line to Burbank'</p>
+   <div>
+    
+<div class="clearfix">
+  <img class="img" src="landscape-2947094_1920.jpg" alt="lighthouse" height="160" width="700">
+  <p>Image credit: Pixabay.com</p>
+  <h1>Moses Okonkwo</h1>
+</div>
+
+   <p>Department of Geography</p>
+    <p> LAB EIGHT</p>
     <div id="mymap"></div>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>  
     <script src="map2.js"></script> 
