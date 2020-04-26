@@ -4,8 +4,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(MO4046)
 
 var stdemographics = 'https://geog4046.github.io/assignment-resources/data/us_state_demographics_ESRI_2010A.geojson'
 
-jQuery.getJSON(stdemographics, function (data) {
-  L.geoJSON(data).addTo(MO4046)
+jQuery.getJSON(stdemographics, function (us_state_demographics_ESRI_2010A) {
+  L.geoJSON(us_state_demographics_ESRI_2010A).addTo(MO4046)
 })
 
 
