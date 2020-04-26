@@ -8,7 +8,6 @@ jQuery.getJSON(st_demographics, function (data) {
   L.geoJSON(data).addTo(MO4046)
 })
 
-L.geoJSON(data, { style: { color: 'green' } }).addTo(MO4046)
 
 
 //              |Happy|  
