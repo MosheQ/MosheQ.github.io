@@ -1,17 +1,44 @@
 var MO4046 = L.map('mymap').setView([39.163989, -102.023264], 5)
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(MO4046)
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-L.tileLayer.wms('http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi', {
-  layers: 'nexrad-n0r-900913',
-  format: 'image/png',
-  transparent: true,
-  attribution: 'NOAA, Iowa State University'
-}).addTo(MO4046)
+var renameThisUrl = 'https://geog4046.github.io/assignment-resources/data/us_state_demographics_ESRI_2010A.geojson'
 
-L.tileLayer.wms('https://mesonet.agron.iastate.edu/cgi-bin/wms/us/wwa.cgi', {
-  layers: 'warnings_c',
-  format: 'image/png',
-  transparent: true,
-  attribution: 'NOAA, Iowa State University'
-}).addTo(MO4046)
+jQuery.getJSON(renameThisUrl, function (data) {
+  L.geoJSON(data).addTo(MO4046)
+})
+
+L.geoJSON(data, { style: { color: 'green' } }).addTo(MO4046)
+
+
+//              |Happy|  
+//                       |Beautiful|
+L.geoJSON(data, { style: { color: 'green' }}).addTo(MO4046)
+
+
+var fourseasons = { color: 'green' }
+var spring = { style: fourseasons }
+L.geoJSON(data, spring).addTo(MO4046)
+
+
+var fourseasons =  function (feature) {
+  var subject = feature.properties.MED_AGE // get the current state's Median Age attribute
+  var newcolor = 'olive' // let the initial color be a darker green
+  if (subject < 38) { newcolor = 'green' } // if the state's median age is less than the average, color it a lighter green
+  return {
+    color: newcolor, // use the color variable above for the value
+    weight: 1,
+    fillOpacity: 0.2
+  }
+}
+
+var age_by_state = function (feature, layer) {
+   var name = feature.properties.STATE_NAME
+   var age = feature.properties.MED_AGE
+   layer.bindPopup('Median age of ' + name + ': ' + age + '<br>National average: 38')
+ }
+
+#if ( stateName == 'Louisiana' ) { // code here }
+
+
