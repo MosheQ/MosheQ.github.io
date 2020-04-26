@@ -2,7 +2,6 @@ var MO4046 = L.map('mymap').setView([39.163989, -102.023264], 5)
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(MO4046)
 
 
-
 var st_demographics = 'https://geog4046.github.io/assignment-resources/data/us_state_demographics_ESRI_2010A.geojson'
 
 jQuery.getJSON(st_demographics, function (data) {
@@ -17,11 +16,6 @@ L.geoJSON(data, { style: { color: 'green' } }).addTo(MO4046)
 L.geoJSON(data, { style: { color: 'green' }}).addTo(MO4046)
 
 
-var fourseasons = { color: 'green' }
-var spring = { style: fourseasons }
-L.geoJSON(data, spring).addTo(MO4046)
-
-
 var fourseasons =  function (feature) {
   var subject = feature.properties.MED_AGE // get the current state's Median Age attribute
   var newcolor = 'olive' // let the initial color be a darker green
@@ -32,6 +26,12 @@ var fourseasons =  function (feature) {
     fillOpacity: 0.2
   }
 }
+
+var spring = { style: fourseasons }
+L.geoJSON(data, spring).addTo(MO4046)
+
+
+
 
 var age_by_state = function (feature, layer) {
    var name = feature.properties.STATE_NAME
