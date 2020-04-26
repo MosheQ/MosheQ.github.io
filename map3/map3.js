@@ -2,9 +2,9 @@ var MO4046 = L.map('mymap').setView([39.163989, -102.023264], 5)
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(MO4046)
 
 
-var st_demographics = 'https://geog4046.github.io/assignment-resources/data/us_state_demographics_ESRI_2010A.geojson'
+var stdemographics = 'https://geog4046.github.io/assignment-resources/data/us_state_demographics_ESRI_2010A.geojson'
 
-jQuery.getJSON(st_demographics, function (data) {
+jQuery.getJSON(stdemographics, function (data) {
   L.geoJSON(data).addTo(MO4046)
 })
 
