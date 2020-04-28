@@ -1,18 +1,18 @@
-var MO4046 = L.map('mymap').setView([39.163989, -102.023264], 5)
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(MO4046)
+var map3 = L.map('mapdiv3').setView([39.163989, -102.023264], 5)
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map3)
 
 
 var stdemographics = 'https://geog4046.github.io/assignment-resources/data/us_state_demographics_ESRI_2010A.geojson'
 
 jQuery.getJSON(stdemographics, function (us_state_demographics_ESRI_2010A) {
-  L.geoJSON(us_state_demographics_ESRI_2010A).addTo(MO4046)
+  L.geoJSON(us_state_demographics_ESRI_2010A).addTo(map3)
 })
 
 
 
 //              |Happy|  
 //                       |Beautiful|
-L.geoJSON(data, { style: { color: 'green' }}).addTo(MO4046)
+L.geoJSON(data, { style: { color: 'green' }}).addTo(map3)
 
 
 var fourseasons =  function (feature) {
