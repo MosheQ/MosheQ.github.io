@@ -1,44 +1,36 @@
- <!DOCTYPE html>
- <html lang="en" dir="ltr">
-   <head>
-     <meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
      <title>4046 LAB 9</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css">
-    <link rel="stylesheet" href="map3.css">
- 
+   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@600&family=Sacramento&display=swap" rel="stylesheet"> <!-- GOOGLE FONTS-->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.css">
+   <link rel="stylesheet" href="map3.css"><!-- MY CSS  -->
   </head>
-  <style>
- 
-.clearfix {
-  overflow: auto;
-}
 
-.img {
-  float: right;
-}
+  <body>
 
-</style>
-   <body>
-   <div>
-    
-<div class="clearfix">
-  <img class="img" src="landscape-2947094_1920.jpg" alt="lighthouse" height="160" width="700">
-  <h1>MOSES OKONKWO</h1>
-  <p>Department of Geography</p>
- <p>GEOG 4046 LAB NINE</p>
- <h4> GeoJSON layers with Leaflet </h4> 
- <p>Image credit: Pixabay.com</p>
- 
-</div>
-  
-    <div id="mapdiv3"></div>
-   
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
-    
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>  
-    <script src="map3.js"></script> 
-  
-   
-    
-    </body>
- </html>
+
+
+ <img src="landscape-2947094_1920.jpg" alt="lighthouse" height="auto" width="560" class="center">
+ <h1>MOSES OKONKWO</h1>
+ <p>Department of Geography</p>
+<p>GEOG 4046 LAB NINE</p>
+<h4> GeoJSON layers with Leaflet </h4>
+
+
+
+   <div id="mapdiv3"></div>
+
+   <!-- LEAFTLET JAVASCRIPT, JQUERY,AND EXTERN JS FILE -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet-src.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+     <script src="map3.js" charset="utf-8"></script>
+
+
+  </body>
+
+</html>
