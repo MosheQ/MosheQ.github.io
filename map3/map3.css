@@ -1,13 +1,20 @@
 #mapdiv3 {
   height: 480px;
-width: 560;
+width: 700;
  }
+
+body {
+	width: 100%;
+	max-width: 700px; /* or whatever width you want */
+	margin-right: auto;
+	margin-left: auto;
+}
 
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+ 
 }
 
 h1 {text-align: center;}
