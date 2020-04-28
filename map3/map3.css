@@ -1,10 +1,9 @@
 #mapdiv3 {
   height: 480px;
-width: 700;
  }
 
 body {
-	width: 700px;
+	width: 100%;
 	max-width: 700px; /* or whatever width you want */
 	margin-right: auto;
 	margin-left: auto;
