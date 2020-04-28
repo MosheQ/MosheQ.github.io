@@ -27,7 +27,7 @@ var fourseasons =  function (feature) {
 }
 
 var spring = { style: fourseasons }
-L.geoJSON(data, spring).addTo(MO4046)
+L.geoJSON(data, spring).addTo(map3)
 
 
 
